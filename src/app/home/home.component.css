@@ -1,0 +1,50 @@
+form{
+    display:flex;
+    flex-direction: column;
+}
+form>*{
+
+    margin:30px
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px !important;
+    justify-content: space-around;
+    color:azure;
+  }
+  
+  input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    width: 50%;
+  }
+  
+  button {
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    color: maroon;
+    border-radius: 8px;
+    width:30%;
+    background-color: aliceblue;
+  }
+  
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }
